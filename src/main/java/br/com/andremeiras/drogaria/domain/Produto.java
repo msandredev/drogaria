@@ -1,26 +1,32 @@
 package br.com.andremeiras.drogaria.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-public record Produto(
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Produto {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        Short codigo,
+        private Short codigo;
 
         @Column(length = 50, nullable = false, unique = true)
-        String nome,
+        private String nome;
 
         @Column(nullable = false)
-        Byte quantidade,
+        private Byte quantidade;
 
         @Column(nullable = false, precision = 5, scale = 2)
-        BigDecimal preco,
+        private BigDecimal preco;
 
         @Column
-        LocalDate dataValidade) {
-        // outras implementações
+        private LocalDate dataValidade;
+
 }
