@@ -18,6 +18,7 @@ class ProdutoTest {
                 "Coca-cola",
                 Byte.valueOf("15"),
                 new BigDecimal("10.50"),
+                null,
                 null
         );
         System.out.println(p);

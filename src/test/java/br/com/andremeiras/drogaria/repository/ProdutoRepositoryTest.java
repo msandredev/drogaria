@@ -21,7 +21,8 @@ class ProdutoRepositoryTest {
                 "Coca-cola",
                 Byte.valueOf("15"),
                 new BigDecimal("10.50"),
-                LocalDate.of(2019, 8, 22)
+                LocalDate.of(2019, 8, 22),
+                null
         );
 
         Produto p2 = new Produto(
@@ -29,7 +30,8 @@ class ProdutoRepositoryTest {
                 "Guaraná Kuat",
                 Byte.valueOf("12"),
                 new BigDecimal("8.50"),
-                LocalDate.of(2018, 9, 3)
+                LocalDate.of(2018, 9, 3),
+                null
         );
         produtoRepository.save(p1);
         produtoRepository.save(p2);
